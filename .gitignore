@@ -1,0 +1,20 @@
+# Compilación e IDE
+bin/
+obj/
+.vs/
+.vscode/
+*.user
+
+# Dependencias y artefactos de distribución
+node_modules/
+dist/
+
+# Entornos y secretos
+.env
+.env.*
+appsettings.Development.json
+secrets.json
+
+# Herramientas de agente y registros
+.agent/
+*.log

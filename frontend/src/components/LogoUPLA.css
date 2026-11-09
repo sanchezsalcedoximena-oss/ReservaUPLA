@@ -1,0 +1,67 @@
+.logo-link {
+  --logo-focus: #0065b1;
+  display: inline-block;
+  position: relative;
+  transform-origin: left center;
+  animation: logo-in 0.45s ease-in-out;
+  transition: transform 0.25s ease-in-out, filter 0.25s ease-in-out;
+}
+
+.logo-link--blanco {
+  --logo-focus: #7fd0ff;
+}
+
+.logo-link img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.logo-link:hover,
+.logo-link:focus-visible {
+  transform: scale(1.06);
+}
+
+.logo-link--color:hover,
+.logo-link--color:focus-visible {
+  filter: drop-shadow(0 3px 8px rgba(0, 58, 104, 0.35));
+}
+
+.logo-link--blanco:hover,
+.logo-link--blanco:focus-visible {
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.55));
+}
+
+.logo-link:focus-visible {
+  outline: 3px solid var(--logo-focus);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
+.logo-link--no-initial {
+  animation: none;
+}
+
+@keyframes logo-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-link {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .logo-link:hover,
+  .logo-link:focus-visible {
+    transform: none;
+    filter: none;
+  }
+}
